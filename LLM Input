@@ -1,0 +1,53 @@
+#TOKENIZATION
+#Line 1: Stores the input sentence in the variable text.
+#Line 2: Splits the sentence into individual words (tokens).
+#Line 3: Prints the label "Tokens:" followed by the list of tokens.
+
+text = "I love AI"
+tokens = text.split()
+print("Tokens:")
+print(tokens)
+
+#EMBEDDING
+#Line 1: Creates a simple embedding dictionary where each word has a vector.
+#Line 2: Retrieves the embedding vector for each token.
+#Line 3: Prints the embedding vectors.
+
+embeddings = {"I":[1,0], "love":[0,1], "AI":[1,1]}
+token_vectors = [embeddings[word] for word in tokens]
+print("Embeddings:", token_vectors)
+
+#NORMAL MATRIX(Q, K, V)
+#Line 1: Defines the Query (Q) vector.
+#Line 2: Defines the Key (K) vector.
+#Line 3: Defines the Value (V) vector.
+#Line 4: Displays the Q, K, and V vectors.
+
+Q = [1, 2]
+K = [2, 1]
+V = [3, 4]
+print("Q:", Q, "K:", K, "V:", V)
+
+#DOT MATRIX (Scaled Dot Product)
+#Line 1: Calculates the dot product between the Query and Key vectors.
+#Line 2: Prints the calculated similarity score.
+
+score = Q[0]*K[0] + Q[1]*K[1]
+print("Dot Product Score:", score)
+
+#ATTENTION
+#Line 1: Multiplies the attention score with the Value vector (simplified example).
+#Line 2: Prints the attention output.
+
+attention = score * V[0]
+print("Attention Output:", attention)
+
+
+#TRANSFORMER
+#Line 1: Stores the attention result as the transformer output.
+#Line 2: Prints the final transformer output.
+
+transformer_output = attention
+print("Transformer Output:", transformer_output)
+
+
